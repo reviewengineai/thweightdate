@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>The Weight Date | Fitness Centre - Prayagraj</title>
+  <meta name="description" content="Prayagraj's premier fitness centre for males & females. No false hopes, only real results. Free diet plans, expert training. Civil Lines, Prayagraj."/>
+  <meta name="theme-color" content="#ffffff"/>
+  <meta property="og:type"        content="website"/>
+  <meta property="og:title"       content="The Weight Date | Fitness Centre - Prayagraj"/>
+  <meta property="og:description" content="Prayagraj&#39;s premier fitness centre for males &amp; females. No false hopes, only real results. Free diet plans, expert training. Civil Lines, Prayagraj."/>
+  <meta property="og:image"       content="assets/og-image.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height"content="630"/>
+  <meta property="og:image:alt"   content="The Weight Date gym, Civil Lines, Prayagraj"/>
+  <meta name="twitter:card"       content="summary_large_image"/>
+  <meta name="twitter:title"      content="The Weight Date | Fitness Centre - Prayagraj"/>
+  <meta name="twitter:description"content="Prayagraj&#39;s premier fitness centre. No false hopes, only real results. Free diet plans &amp; expert training."/>
+  <meta name="twitter:image"      content="assets/og-image.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="video" href="assets/hero-bg.mp4" type="video/mp4"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ══════════════════════════════════════════
+       NIKE DESIGN TOKENS - The Weight Date
+    ══════════════════════════════════════════ */
+    :root {
+      /* Brand palette */
+      --ink:          #111111;   /* primary CTA, text, active states */
+      --canvas:       #ffffff;   /* page background, card fill */
+      --soft-cloud:   #f5f5f5;   /* card image areas, secondary surfaces */
+      --hairline:     #e5e5e5;   /* 1px dividers, borders */
+      --hairline-hard:#cacacb;   /* stronger dividers */
+      --mute:         #707072;   /* secondary text */
+      --charcoal:     #39393b;   /* body copy */
+      --stone:        #9e9ea0;   /* lowest-emphasis text */
+      --on-primary:   #ffffff;
+
+      /* Brand accent - used like Nike's sale signal: sparingly */
+      --brand:        #e8273a;
+      --success:      #007d48;
+      --success-bright:#1eaa52;
+      --gold:         #c9a84c;
+
+      /* Typography */
+      --disp: 'Bebas Neue', 'Impact', sans-serif;
+      --font: 'Montserrat', system-ui, sans-serif;
+      --mono: 'Space Mono', monospace;
+
+      /* Border radius - Nike token set */
+      --r-none: 0px;
+      --r-sm:   18px;
+      --r-md:   24px;   /* search pill */
+      --r-lg:   30px;   /* universal CTA pill */
+      --r-full: 9999px; /* icon buttons, swatch dots */
+
+      /* Spacing - 8px base */
+      --s-xs:  4px;
+      --s-sm:  8px;
+      --s-md:  12px;
+      --s-lg:  18px;
+      --s-xl:  24px;
+      --s-xxl: 30px;
+      --s-sec: 48px;    /* section rhythm */
+
+      --bar-h: 68px;
+      --safe:  env(safe-area-inset-bottom, 0px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font);
+      background: var(--canvas);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button, input { font: inherit; }
+
+    .wrap { max-width: 480px; margin: 0 auto; padding: 0 20px; }
+
+    /* ── TYPOGRAPHY (Nike tokens) ── */
+    /* display-campaign: 96px/0.9/uppercase - hero editorial headline only */
+    .t-campaign {
+      font-family: var(--disp);
+      font-size: clamp(76px, 22vw, 128px);
+      line-height: 0.9;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    /* heading-xl: 32px/1.2 - section titles */
+    .t-xl {
+      font-family: var(--disp);
+      font-size: 32px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    /* heading-lg: 24px/500 */
+    .t-lg { font-size: 24px; font-weight: 500; line-height: 1.2; }
+    /* body-strong: 16px/500 - product names, nav links */
+    .t-strong { font-size: 16px; font-weight: 500; line-height: 1.5; }
+    /* body-md: 16px/400 */
+    .t-body { font-size: 16px; font-weight: 400; line-height: 1.5; }
+    /* caption-md: 14px/500 */
+    .t-cap { font-size: 14px; font-weight: 500; line-height: 1.5; }
+    /* caption-sm: 12px/500 */
+    .t-caps { font-size: 12px; font-weight: 500; line-height: 1.5; }
+    /* eyebrow: mono 10px */
+    .t-eye {
+      font-family: var(--mono); font-size: 10px;
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+
+    /* ── BUTTONS - Nike pill system ── */
+    /* All CTAs: pill-shaped only. No sharp corners anywhere. */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      height: 48px; padding: 0 32px;
+      border: none; border-radius: var(--r-lg); /* 30px pill */
+      font-size: 16px; font-weight: 500; line-height: 1.5;
+      cursor: pointer; text-decoration: none; white-space: nowrap;
+      transition: opacity 0.15s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.18s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn:active { transform: scale(0.97); opacity: 0.85; }
+    @media (hover: hover) {
+      .btn-primary:hover   { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(17,17,17,0.22); }
+      .btn-secondary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+      .btn-ghost:hover     { background: var(--soft-cloud); transform: translateY(-2px); }
+      .btn-on-image:hover  { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.14); }
+    }
+
+    /* button-primary: ink bg, white text */
+    .btn-primary { background: var(--ink); color: var(--on-primary); }
+    /* button-secondary: soft-cloud bg, ink text */
+    .btn-secondary { background: var(--soft-cloud); color: var(--ink); }
+    /* button-on-image: white bg, ink text - for overlays on dark editorial tiles */
+    .btn-on-image { background: var(--canvas); color: var(--ink); }
+    /* button-ghost: transparent, ink border */
+    .btn-ghost {
+      background: transparent; color: var(--ink);
+      border: 1.5px solid var(--hairline-hard);
+    }
+    /* Compact pill (nav-level) */
+    .btn-sm {
+      height: 36px; padding: 0 18px;
+      font-size: 14px; border-radius: var(--r-lg);
+    }
+    /* icon-circular: 40px circle - Nike's chrome icon controls */
+    .btn-circle {
+      width: 40px; height: 40px; border-radius: var(--r-full);
+      background: var(--soft-cloud); color: var(--ink); border: none;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: opacity 0.15s;
+      flex-shrink: 0;
+    }
+    /* filter-chip */
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      height: 36px; padding: 0 16px;
+      border-radius: var(--r-lg); border: 1px solid var(--hairline-hard);
+      background: var(--canvas); color: var(--ink);
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      white-space: nowrap; transition: background 0.14s, color 0.14s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .chip.active, .chip:hover { background: var(--ink); color: var(--on-primary); border-color: var(--ink); }
+
+    .btn-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+    /* ── UTILITY BAR ── */
+    .ubar {
+      height: 36px; background: var(--soft-cloud);
+      border-bottom: 1px solid var(--hairline);
+      display: flex; align-items: center; overflow: hidden;
+    }
+    .ubar-track {
+      display: flex; align-items: center; gap: 28px;
+      white-space: nowrap; padding: 0 20px;
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .ubar-track::-webkit-scrollbar { display: none; }
+    .ubar-item { font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--charcoal); flex-shrink: 0; }
+    .ubar-sep { color: var(--hairline-hard); flex-shrink: 0; }
+
+    /* ── PRIMARY NAV ── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      height: 56px;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid var(--hairline);
+    }
+    .nav-inner {
+      max-width: 480px; margin: 0 auto; padding: 0 20px;
+      height: 100%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-mark {
+      width: 32px; height: 32px;
+      border-radius: var(--r-full); flex-shrink: 0;
+      overflow: hidden; background: var(--canvas);
+      border: 1px solid var(--hairline-hard);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-mark img { width: 100%; height: 100%; object-fit: cover; }
+    .nav-name { font-family: var(--disp); font-size: 17px; letter-spacing: 1px; color: var(--ink); }
+
+    /* ── MARQUEE ── */
+    .marquee {
+      height: 40px; background: var(--canvas);
+      border-bottom: 1px solid var(--hairline);
+      display: flex; align-items: center; overflow: hidden;
+    }
+    .mq-track {
+      display: flex; gap: 40px; white-space: nowrap;
+      animation: mq-scroll 22s linear infinite;
+    }
+    .mq-item { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); flex-shrink: 0; }
+    .mq-sep { color: var(--hairline-hard); flex-shrink: 0; }
+    @keyframes mq-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ── HERO - editorial campaign tile (dark) ── */
+    /* Nike: full-bleed photography + {typography.display-campaign} burned in bottom-left */
+    .hero {
+      position: relative;
+      background: var(--ink);
+      overflow: hidden;
+      min-height: calc(100svh - 92px);
+      display: flex; align-items: flex-end; /* headline anchored bottom - Nike editorial */
+      padding-bottom: var(--s-sec);
+    }
+    .hero-video,
+    .footer-video {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; pointer-events: none;
+    }
+    .hero-video { z-index: 0; opacity: 0.72; }
+    /* Subtle diagonal stripe texture */
+    .hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(17,17,17,0.12), rgba(17,17,17,0.48)),
+        repeating-linear-gradient(
+          -45deg, transparent, transparent 48px,
+          rgba(255,255,255,0.018) 48px, rgba(255,255,255,0.018) 49px
+        );
+    }
+    /* Atmospheric ghost letterform - simulates editorial photography depth */
+    .hero-ghost {
+      position: absolute; right: -12px; bottom: -24px;
+      font-family: var(--disp);
+      font-size: clamp(220px, 68vw, 500px);
+      line-height: 0.8; letter-spacing: -6px;
+      color: rgba(232,39,58,0.045); /* brand at 4.5% - barely there */
+      user-select: none; pointer-events: none; z-index: 1; text-transform: uppercase;
+    }
+    .hero-inner {
+      position: relative; z-index: 2;
+      max-width: 480px; margin: 0 auto; width: 100%; padding: 0 20px;
+    }
+
+    /* {typography.display-campaign} applied */
+    .hero-title { color: var(--on-primary); margin-bottom: 18px; }
+    .hero-title em { color: var(--brand); font-style: normal; }
+
+    .hero-sub {
+      font-size: 14px; font-weight: 300; line-height: 1.65;
+      color: rgba(255,255,255,0.75); margin-bottom: 24px; max-width: 300px;
+    }
+
+    /* ── SECTION RHYTHM - {spacing.section} = 48px ── */
+    .sec { padding: var(--s-sec) 0; }
+    .sec-cloud { background: var(--soft-cloud); }
+    .sec-ink { background: var(--ink); }
+
+    .sec-head { margin-bottom: 30px; }
+    .sec-eye { color: var(--mute); margin-bottom: 6px; }
+    .sec-title { color: var(--ink); }
+
+    /* ── PRODUCT CARDS - Nike card system ── */
+    /* Services rendered as Nike product cards: image on soft-cloud, metadata below */
+    .cards-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: var(--s-sm); /* Nike: {spacing.sm} = 8px gutters */
+    }
+    .card {
+      background: var(--canvas);
+      border-radius: var(--r-none); /* Nike: zero radius on cards */
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: box-shadow 0.22s ease, opacity 0.15s;
+      will-change: transform;
+      position: relative; z-index: 1;
+    }
+    /* Touch: depress on tap */
+    .card:active {
+      transform: scale(0.97) !important;
+      opacity: 0.85;
+      box-shadow: none !important;
+    }
+    /* Hover-capable (desktop/trackpad): lift + shadow — JS tilt overrides transform */
+    @media (hover: hover) {
+      .card:hover {
+        box-shadow: 0 14px 36px rgba(0,0,0,0.11), 0 2px 8px rgba(0,0,0,0.06);
+        z-index: 2;
+      }
+      .card:hover .card-img img { transform: scale(1.05); }
+      .card:hover .card-name { color: var(--brand); }
+    }
+    /* Image area: soft-cloud 1:1 square - the product's "studio background" */
+    .card-img {
+      background: var(--soft-cloud);
+      aspect-ratio: 1 / 1;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .card-img svg { color: var(--ink); opacity: 0.5; }
+    .card-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+    }
+    /* Metadata: sits directly below image, {spacing.sm} gap between rows */
+    .card-meta { padding: var(--s-sm) 0 2px; }
+    .card-name {
+      font-size: 15px; font-weight: 500; color: var(--ink);
+      margin-bottom: 2px; line-height: 1.35;
+      transition: color 0.18s;
+    }
+    .card-sub { font-size: 13px; font-weight: 400; color: var(--mute); margin-bottom: 5px; line-height: 1.4; }
+    .card-price { font-size: 12px; font-weight: 500; color: var(--success); } /* green = "Included" */
+    .card-price-red { color: var(--brand); } /* red = "Free" - sparingly, like Nike sale signal */
+
+    /* ── CAMPAIGN TILE - Nike's signature editorial unit ── */
+    .campaign {
+      position: relative; background: var(--ink); overflow: hidden;
+      padding: var(--s-sec) 0 calc(var(--s-sec) + 8px);
+    }
+    .campaign::before {
+      content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background: repeating-linear-gradient(
+        -45deg, transparent, transparent 64px,
+        rgba(255,255,255,0.008) 64px, rgba(255,255,255,0.008) 65px
+      );
+    }
+    .campaign-inner { position: relative; z-index: 2; max-width: 480px; margin: 0 auto; padding: 0 20px; }
+    .campaign-eye { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 14px; }
+    /* {typography.display-campaign} burned into dark tile */
+    .campaign-title {
+      font-family: var(--disp);
+      font-size: clamp(56px, 15vw, 88px);
+      line-height: 0.92; text-transform: uppercase;
+      color: var(--on-primary); margin-bottom: 20px;
+    }
+    .campaign-sub {
+      font-size: 14px; font-weight: 300; line-height: 1.65;
+      color: rgba(255,255,255,0.72); margin-bottom: 32px; max-width: 280px;
+    }
+    /* btn-on-image: Nike's white pill anchored at bottom-left of editorial tile */
+
+    /* ── DISCLOSURE ROWS - Nike PDP-style feature list ── */
+    /* Used for "Why Us" - same pattern as Nike's "View Product Details" rows */
+    .disc-list { border-top: 1px solid var(--hairline); }
+    .disc-row {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px 0; border-bottom: 1px solid var(--hairline);
+      transition: padding-left 0.2s ease;
+    }
+    @media (hover: hover) {
+      .disc-row:hover { padding-left: 6px; }
+      .disc-row:hover .disc-icon { background: var(--brand); }
+    }
+    .disc-icon {
+      width: 24px; height: 24px; border-radius: var(--r-full);
+      background: var(--ink); color: var(--on-primary);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+      transition: background 0.18s;
+    }
+    .disc-title { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+    .disc-desc { font-size: 13px; font-weight: 400; color: var(--mute); line-height: 1.55; }
+
+    .about-kicker {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 1.6px;
+      text-transform: uppercase; color: var(--brand); margin-bottom: 12px;
+    }
+    .about-lead {
+      font-size: 21px; font-weight: 500; line-height: 1.25;
+      color: var(--ink); margin-bottom: 16px;
+    }
+    .about-body { font-size: 15px; font-weight: 400; line-height: 1.7; color: var(--charcoal); }
+    .about-body strong { color: var(--ink); font-weight: 600; }
+    .about-proof {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--hairline); margin: 26px 0;
+      border: 1px solid var(--hairline);
+    }
+    .about-proof-item {
+      min-height: 96px; background: var(--canvas);
+      padding: 16px 14px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .about-proof-top {
+      font-family: var(--mono); font-size: 9px; letter-spacing: 1.4px;
+      text-transform: uppercase; color: var(--mute);
+    }
+    .about-proof-main { font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+    .about-proof-note { font-size: 12px; font-weight: 400; color: var(--mute); line-height: 1.45; margin-top: 4px; }
+    .about-actions {
+      display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+      padding-top: 2px;
+    }
+
+    /* ── ABOUT TABS ── */
+    .about-tabs {
+      display: flex; background: var(--soft-cloud);
+      border-radius: var(--r-lg); padding: 4px;
+      margin-bottom: 28px; gap: 4px;
+    }
+    .about-tab {
+      flex: 1; height: 40px; border: none; border-radius: calc(var(--r-lg) - 2px);
+      background: transparent; color: var(--mute);
+      font-family: var(--font); font-size: 14px; font-weight: 500;
+      cursor: pointer; transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .about-tab.active {
+      background: var(--canvas); color: var(--ink);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+    }
+    .about-panel { display: none; }
+    .about-panel.active { display: block; }
+
+    /* ── OWNER CARD ── */
+    .owner-card {
+      background: var(--canvas); border-radius: var(--r-md);
+      border: 1px solid var(--hairline);
+      padding: 32px 24px 28px;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center;
+    }
+    .owner-avatar {
+      width: 108px; height: 108px; border-radius: var(--r-full);
+      overflow: hidden; border: 3px solid var(--canvas);
+      box-shadow: 0 0 0 1px var(--hairline), 0 4px 18px rgba(0,0,0,0.10);
+      margin-bottom: 18px; flex-shrink: 0;
+    }
+    .owner-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .owner-eyebrow {
+      font-family: var(--mono); font-size: 9px; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--mute); margin-bottom: 6px;
+    }
+    .owner-name { font-size: 24px; font-weight: 600; color: var(--ink); margin-bottom: 14px; line-height: 1.2; }
+    .owner-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 18px; }
+    .owner-tag {
+      display: inline-flex; align-items: center; gap: 5px;
+      height: 30px; padding: 0 12px;
+      background: var(--soft-cloud); border-radius: var(--r-lg);
+      font-size: 12px; font-weight: 500; color: var(--charcoal);
+    }
+    .owner-bio {
+      font-size: 14px; font-weight: 400; line-height: 1.75;
+      color: var(--charcoal); margin-bottom: 20px;
+    }
+    .owner-quote {
+      display: flex; gap: 12px; align-items: flex-start;
+      text-align: left; width: 100%; margin-bottom: 22px;
+    }
+    .owner-quote-bar { width: 3px; min-height: 100%; background: var(--ink); border-radius: 2px; flex-shrink: 0; }
+    .owner-quote-text { font-size: 14px; font-weight: 500; font-style: italic; color: var(--ink); line-height: 1.6; }
+    .owner-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; width: 100%; }
+
+    /* ── TIMINGS - Nike PDP disclosure style ── */
+    .timing-list { border-top: 1px solid var(--hairline); }
+    .timing-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 15px 0; border-bottom: 1px solid var(--hairline);
+    }
+    .timing-row.today {
+      background: rgba(17,17,17,0.03);
+      margin: 0 -20px; padding: 15px 20px;
+    }
+    .timing-day { font-size: 15px; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+    .timing-today { font-family: var(--mono); font-size: 9px; letter-spacing: 1px; background: var(--ink); color: var(--on-primary); border-radius: var(--r-full); padding: 2px 8px; }
+    .timing-time { font-family: var(--mono); font-size: 12px; color: var(--mute); }
+    .timing-closed { font-family: var(--mono); font-size: 12px; color: var(--brand); }
+
+    /* ── LOCATION ── */
+    .map-wrap {
+      height: 220px; overflow: hidden;
+      border-radius: var(--r-none); /* Nike: no radius */
+      border: 1px solid var(--hairline);
+    }
+    .map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .location-grid { display: grid; grid-template-columns: 1fr; gap: 34px; }
+    .branch-card {
+      display: flex; flex-direction: column; gap: var(--s-xl);
+      padding-bottom: 34px; border-bottom: 1px solid var(--hairline);
+    }
+    .branch-card:last-child { padding-bottom: 0; border-bottom: 0; }
+    .branch-name { font-family: var(--disp); font-size: 28px; letter-spacing: 0.5px; color: var(--ink); }
+    .addr-list { display: flex; flex-direction: column; gap: var(--s-xl); }
+    .addr-row { display: flex; gap: 12px; align-items: flex-start; }
+    .addr-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: var(--soft-cloud); border-radius: var(--r-none);
+      display: flex; align-items: center; justify-content: center; color: var(--ink);
+    }
+    .addr-label { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mute); margin-bottom: 4px; }
+    .addr-val { font-size: 13px; font-weight: 400; line-height: 1.65; color: var(--charcoal); }
+    .addr-phone { font-family: var(--disp); font-size: 26px; letter-spacing: 1px; color: var(--ink); }
+
+    /* ── MAP PLACEHOLDER (click-to-load) ── */
+    .map-placeholder {
+      width: 100%; height: 100%;
+      background: var(--soft-cloud);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 10px; cursor: pointer;
+      border: none; padding: 0;
+      transition: background 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .map-placeholder:hover, .map-placeholder:active { background: #ebebeb; }
+    .map-placeholder-icon {
+      width: 44px; height: 44px; border-radius: var(--r-full);
+      background: var(--ink); color: var(--on-primary);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .map-placeholder-label {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--mute);
+    }
+    .map-placeholder-sub { font-size: 12px; color: var(--stone); }
+    .map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+    /* ── FOOTER ── */
+    .footer {
+      position: relative; overflow: hidden;
+      background: var(--ink);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 40px 0 28px;
+    }
+    .footer::before {
+      content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(180deg, rgba(17,17,17,0.34), rgba(17,17,17,0.58));
+    }
+    .footer-video { z-index: 0; opacity: 0; transition: opacity 0.5s ease; }
+    .footer-video.ready { opacity: 0.78; }
+    .footer .wrap { position: relative; z-index: 2; }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center; }
+    .footer-logo { display: flex; align-items: center; gap: 10px; }
+    .footer-mark {
+      width: 30px; height: 30px; border-radius: var(--r-full);
+      overflow: hidden; background: var(--canvas); border: 1px solid var(--hairline-hard);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .footer-mark img { width: 100%; height: 100%; object-fit: cover; }
+    .footer-name { font-family: var(--disp); font-size: 17px; letter-spacing: 1px; color: var(--on-primary); }
+    .footer-addr { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.68); line-height: 1.7; }
+    .footer-tel { font-family: var(--disp); font-size: 22px; letter-spacing: 1px; color: var(--on-primary); }
+    .footer-socials { display: flex; gap: 8px; }
+    .footer-soc {
+      width: 36px; height: 36px; border-radius: var(--r-full);
+      border: 1px solid rgba(255,255,255,0.28); background: rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center; color: var(--on-primary);
+      transition: background 0.14s;
+    }
+    .footer-soc:hover { background: rgba(255,255,255,0.16); }
+    .footer-rule { width: 100%; height: 1px; background: rgba(255,255,255,0.16); }
+    .footer-legal { font-family: var(--mono); font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+
+    /* ── BOTTOM BAR - Nike-adapted mobile sticky ── */
+    .bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+      height: calc(var(--bar-h) + var(--safe));
+      padding-bottom: var(--safe);
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(20px) saturate(200%);
+      -webkit-backdrop-filter: blur(20px) saturate(200%);
+      border-top: 1px solid var(--hairline);
+    }
+    .bar-inner {
+      max-width: 480px; margin: 0 auto; width: 100%;
+      height: var(--bar-h); display: grid; grid-template-columns: repeat(4,1fr);
+      align-items: center; padding: 0 8px; gap: 2px;
+    }
+    .bar-btn {
+      display: flex; flex-direction: column; align-items: center; gap: 5px;
+      padding: 6px 4px 8px; border-radius: var(--r-md);
+      border: none; background: transparent; cursor: pointer; color: var(--ink);
+      transition: background 0.12s; -webkit-tap-highlight-color: transparent;
+    }
+    .bar-btn:active { background: var(--soft-cloud); }
+    .bar-ico {
+      width: 36px; height: 36px; border-radius: var(--r-full);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .bar-lbl { font-family: var(--mono); font-size: 8px; letter-spacing: 0.8px; text-transform: uppercase; color: var(--mute); line-height: 1; }
+    /* Call: ink (button-primary style) */
+    .b-call .bar-ico { background: var(--ink); color: var(--on-primary); }
+    .b-call .bar-lbl { color: var(--ink); font-weight: 700; }
+    /* WhatsApp: semantic green */
+    .b-wa .bar-ico { background: #22c55e; color: #fff; }
+    .b-wa .bar-lbl { color: #22c55e; }
+    /* Others: icon-circular soft-cloud */
+    .b-dir .bar-ico, .b-save .bar-ico { background: var(--soft-cloud); border: 1px solid var(--hairline); }
+
+    /* ── SERVICE LIGHTBOX - Nike bottom sheet ── */
+    .lb {
+      position: fixed; inset: 0; z-index: 999;
+      display: none; align-items: flex-end; justify-content: center;
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+    }
+    .lb.open { display: flex; }
+    .lb-sheet {
+      position: relative; width: 100%; max-width: 480px;
+      background: var(--canvas);
+      border-radius: 14px 14px 0 0;
+      border: 1px solid var(--hairline); border-bottom: 0;
+      padding: 22px 20px calc(24px + var(--safe));
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .lb-handle { width: 40px; height: 4px; border-radius: 4px; background: var(--hairline-hard); margin: 0 auto 8px; }
+    .lb-close {
+      position: absolute; top: 16px; right: 16px;
+      width: 30px; height: 30px; border-radius: var(--r-full);
+      background: var(--soft-cloud); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; color: var(--ink);
+    }
+    .lb-name { font-family: var(--disp); font-size: 28px; letter-spacing: 1px; }
+    .lb-desc { font-size: 14px; font-weight: 400; line-height: 1.65; color: var(--charcoal); }
+
+    /* ── FITBOT - Nike ink-palette chatbot ── */
+    #jlauncher {
+      position: fixed;
+      bottom: calc(var(--bar-h) + var(--safe) + 14px); right: 18px;
+      z-index: 9999; width: 44px; height: 44px; border-radius: var(--r-full);
+      background: var(--ink); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 16px rgba(17,17,17,0.25);
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    #jlauncher:hover { transform: scale(1.06); box-shadow: 0 4px 22px rgba(17,17,17,0.35); }
+    #jlauncher svg { fill: var(--on-primary); width: 18px; height: 18px; }
+    .jnotif { position: absolute; top: 6px; right: 6px; width: 8px; height: 8px; background: var(--success-bright); border-radius: 50%; border: 2px solid var(--ink); }
+
+    #jpanel {
+      position: fixed;
+      bottom: calc(var(--bar-h) + var(--safe) + 72px); right: 18px;
+      width: 340px; height: 520px;
+      background: var(--canvas); border: 1px solid var(--hairline);
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.14);
+      display: flex; flex-direction: column;
+      transform: scale(0.95) translateY(12px); opacity: 0; pointer-events: none;
+      transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), opacity 0.18s;
+      z-index: 9998; overflow: hidden;
+    }
+    #jpanel.open { transform: scale(1) translateY(0); opacity: 1; pointer-events: all; }
+
+    #jhead {
+      background: var(--ink); padding: 13px 14px;
+      display: flex; align-items: center; gap: 11px; flex-shrink: 0;
+    }
+    .javatar {
+      width: 38px; height: 38px; border-radius: var(--r-full);
+      background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative;
+    }
+    .javatar svg { fill: var(--on-primary); width: 20px; height: 20px; }
+    .jonline { position: absolute; bottom: 0; right: 0; width: 9px; height: 9px; background: var(--success-bright); border-radius: 50%; border: 2px solid var(--ink); }
+    .jinfo { flex: 1; }
+    .jname { font-family: var(--disp); font-size: 18px; letter-spacing: 1px; color: var(--on-primary); line-height: 1; }
+    .jsub { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 2px; }
+    #jclose {
+      width: 26px; height: 26px; border-radius: var(--r-full);
+      background: rgba(255,255,255,0.1); border: none;
+      color: rgba(255,255,255,0.7); font-size: 12px;
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
+    }
+    #jbody {
+      flex: 1; overflow-y: auto; padding: 12px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    #jbody::before { content: ''; flex: 1; min-height: 0; }
+    #jbody::-webkit-scrollbar { width: 3px; }
+    #jbody::-webkit-scrollbar-thumb { background: var(--hairline-hard); border-radius: 4px; }
+    .jmsg {
+      max-width: 85%; padding: 10px 14px; border-radius: 14px;
+      font-size: 13px; line-height: 1.6;
+      animation: jup 0.2s ease;
+    }
+    @keyframes jup { from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none} }
+    .jmsg.bot { background: var(--soft-cloud); color: var(--ink); border-bottom-left-radius: 4px; align-self: flex-start; }
+    .jmsg.user { background: var(--ink); color: var(--on-primary); border-bottom-right-radius: 4px; align-self: flex-end; }
+    .jthink {
+      display: flex; align-items: center; gap: 6px; padding: 10px 14px;
+      background: var(--soft-cloud); border-radius: 14px; border-bottom-left-radius: 4px;
+      align-self: flex-start; animation: jup 0.2s ease;
+    }
+    .jdots { display: flex; gap: 4px; }
+    .jdots span { width: 5px; height: 5px; background: var(--mute); border-radius: 50%; animation: jdot 1.1s infinite; }
+    .jdots span:nth-child(2) { animation-delay: .18s; }
+    .jdots span:nth-child(3) { animation-delay: .36s; }
+    @keyframes jdot { 0%,80%,100%{transform:scale(.65);opacity:.3}40%{transform:scale(1);opacity:.9} }
+    #jchips {
+      padding: 8px 12px 10px; display: flex; flex-wrap: wrap; gap: 6px;
+      border-top: 1px solid var(--hairline); flex-shrink: 0;
+    }
+    .jchip {
+      background: var(--soft-cloud); border: 1px solid var(--hairline);
+      border-radius: var(--r-full); padding: 5px 12px;
+      font-size: 12px; font-weight: 500; color: var(--ink); cursor: pointer;
+      transition: background 0.12s, color 0.12s, border-color 0.12s;
+    }
+    .jchip:hover { background: var(--ink); color: var(--on-primary); border-color: var(--ink); }
+    #jinputrow {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 12px 12px;
+      border-top: 1px solid var(--hairline); flex-shrink: 0;
+    }
+    /* Nike search-pill: soft-cloud bg, rounded-md (24px) */
+    #jinput {
+      flex: 1; height: 40px; padding: 0 16px;
+      border-radius: var(--r-md); border: 1px solid var(--hairline-hard);
+      background: var(--soft-cloud); font-size: 13px; color: var(--ink); outline: none;
+      transition: border-color 0.12s, box-shadow 0.12s;
+    }
+    #jinput:focus { border-color: var(--ink); box-shadow: 0 0 0 2px rgba(17,17,17,0.07); background: var(--canvas); }
+    #jinput::placeholder { color: var(--stone); }
+    #jsend {
+      width: 32px; height: 32px; border-radius: var(--r-full);
+      background: var(--ink); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    #jsend svg { fill: var(--on-primary); width: 13px; height: 13px; }
+    @media (max-width: 480px) {
+      #jpanel {
+        width: 100%; left: 0; right: 0;
+        bottom: calc(var(--bar-h) + var(--safe));
+        height: min(520px, calc(100dvh - var(--bar-h) - var(--safe) - 70px));
+        border-radius: 12px 12px 0 0;
+      }
+      body:has(#jpanel.open) #jlauncher { opacity: 0; pointer-events: none; }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.vis { opacity: 1; transform: none; }
+    .fu { opacity: 0; animation: fadeup 0.5s ease forwards; }
+    .fu-1{animation-delay:.05s} .fu-2{animation-delay:.16s} .fu-3{animation-delay:.26s} .fu-4{animation-delay:.36s} .fu-5{animation-delay:.46s}
+    @keyframes fadeup { from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none} }
+
+    @media (min-width: 768px) {
+      body { padding-bottom: 0; }
+      .wrap,
+      .nav-inner,
+      .hero-inner,
+      .campaign-inner,
+      .bar-inner {
+        max-width: 1120px;
+        padding-left: 36px;
+        padding-right: 36px;
+      }
+      .t-campaign { font-size: clamp(104px, 11vw, 150px); }
+      .t-xl { font-size: 42px; }
+      .sec { padding: 72px 0; }
+      .sec-head {
+        margin-bottom: 36px;
+      }
+      .hero {
+        min-height: min(760px, calc(100svh - 96px));
+        padding-bottom: 84px;
+      }
+      .hero-inner { margin: 0 auto; }
+      .hero-title,
+      .hero-sub,
+      .hero .btn-row { max-width: 560px; }
+      .hero-sub { font-size: 16px; max-width: 440px; }
+      .hero-ghost {
+        right: 6vw; bottom: -40px;
+        font-size: clamp(360px, 34vw, 560px);
+      }
+      .cards-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .card-meta { padding-top: 12px; }
+      .card-name { font-size: 17px; }
+      .card-sub { font-size: 14px; }
+      .campaign { padding: 84px 0 96px; }
+      .campaign-title { font-size: clamp(82px, 9vw, 132px); max-width: 620px; }
+      .campaign-sub { font-size: 16px; max-width: 420px; }
+      .disc-list {
+        display: grid; grid-template-columns: 1fr 1fr;
+        gap: 0 36px; border-top: 0;
+      }
+      .disc-row { border-top: 1px solid var(--hairline); }
+      .about-lead { font-size: 32px; max-width: 680px; }
+      .about-body { max-width: 760px; }
+      .about-proof { grid-template-columns: repeat(4, 1fr); }
+      .map-wrap { height: 340px; }
+      .footer { padding: 64px 0 44px; }
+      .footer-inner { gap: 24px; }
+      .bar { display: none; }
+      #jlauncher { bottom: 24px; right: 24px; }
+      #jpanel { bottom: 84px; right: 24px; }
+    }
+
+    @media (min-width: 1100px) {
+      .cards-grid { gap: 24px; }
+      .location-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+      }
+      .branch-card {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+      .location-info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--s-xl);
+      }
+      .map-wrap { height: 360px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fu,.reveal{animation:none;transition:none;opacity:1;transform:none}
+      .mq-track{animation:none}
+      .hero-video,.footer-video{display:none}
+    }
+
+    /* Utility spacer */
+    .gap { height: var(--s-sec); }
+
+    /* ── FOOTER POLICY LINKS ── */
+    .footer-policy-row { margin-top: 8px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 10px; }
+    .footer-policy-btn {
+      background: none; border: none; padding: 0; cursor: pointer;
+      font-family: var(--mono); font-size: 9px; letter-spacing: 1px;
+      text-transform: uppercase; color: rgba(255,255,255,0.65);
+      text-decoration: underline; text-underline-offset: 3px;
+      transition: color 0.14s;
+    }
+    .footer-policy-btn:hover { color: var(--canvas); }
+    .footer-policy-sep { color: rgba(255,255,255,0.30); font-family: var(--mono); font-size: 9px; line-height: 1; }
+
+    /* ── LEGAL MODAL ── */
+    #lm {
+      position: fixed; inset: 0; z-index: 1200;
+      display: flex; align-items: flex-end; justify-content: center;
+      pointer-events: none; visibility: hidden;
+    }
+    #lm.open { pointer-events: all; visibility: visible; }
+    .lm-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.52);
+      backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+      opacity: 0; transition: opacity 0.28s ease;
+    }
+    #lm.open .lm-overlay { opacity: 1; }
+    .lm-panel {
+      position: relative; z-index: 1;
+      width: 100%; max-width: 640px;
+      height: 92vh;
+      background: var(--canvas);
+      border-radius: 16px 16px 0 0;
+      border: 1px solid var(--hairline); border-bottom: 0;
+      display: flex; flex-direction: column;
+      transform: translateY(100%);
+      transition: transform 0.34s cubic-bezier(0.32,0.72,0,1);
+      overflow: hidden;
+    }
+    #lm.open .lm-panel { transform: translateY(0); }
+    .lm-handle {
+      width: 36px; height: 4px; border-radius: 2px;
+      background: var(--hairline-hard);
+      margin: 10px auto 0; flex-shrink: 0;
+    }
+    .lm-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 22px 14px;
+      border-bottom: 1px solid var(--hairline);
+      flex-shrink: 0;
+    }
+    .lm-title {
+      font-family: var(--disp); font-size: 20px;
+      letter-spacing: 0.8px; text-transform: uppercase; color: var(--ink);
+    }
+    .lm-close {
+      width: 34px; height: 34px; border-radius: var(--r-full);
+      background: var(--soft-cloud); border: none;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; cursor: pointer; color: var(--ink);
+      flex-shrink: 0; transition: background 0.14s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .lm-close:hover { background: var(--hairline); }
+    .lm-body {
+      flex: 1; overflow-y: auto; padding: 28px 22px 56px;
+      -webkit-overflow-scrolling: touch;
+    }
+    /* ── Legal document typography ── */
+    .lm-doc { display: none; }
+    .lm-doc.active { display: block; }
+    .lm-meta {
+      font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--mute); margin-bottom: 28px;
+    }
+    .lm-doc h3 {
+      font-family: var(--font); font-size: 11px; font-weight: 600;
+      letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--ink); margin: 30px 0 10px;
+      padding-bottom: 7px; border-bottom: 1px solid var(--hairline);
+    }
+    .lm-doc h3:first-of-type { margin-top: 0; }
+    .lm-doc ol { padding-left: 18px; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+    .lm-doc li { font-size: 13px; font-weight: 400; line-height: 1.75; color: var(--charcoal); }
+    .lm-doc ol.alpha { list-style-type: lower-alpha; margin-top: 6px; padding-left: 20px; }
+    .lm-doc strong { color: var(--ink); font-weight: 600; }
+    .lm-grievance {
+      background: var(--soft-cloud); padding: 14px 16px;
+      border-left: 3px solid var(--ink); margin: 10px 0;
+      font-size: 13px; line-height: 1.75; color: var(--charcoal);
+    }
+
+    /* ── FOOTER SOCIAL GROUPS ── */
+    .footer-social-wrap { display: flex; flex-direction: column; gap: 14px; align-items: center; margin-top: 8px; }
+    .footer-branch-social { display: flex; align-items: center; gap: 12px; }
+    .footer-social-lbl { font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.45); width: 85px; text-align: right; }
+    .footer-soc-group { display: flex; gap: 8px; }
+
+    /* ── LOCATION TABS ── */
+    .loc-tabs {
+      display: flex; background: var(--soft-cloud);
+      border-radius: var(--r-lg); padding: 4px;
+      margin-bottom: 32px; gap: 4px;
+      max-width: 480px; margin-left: auto; margin-right: auto;
+    }
+    .loc-tab {
+      flex: 1; height: 40px; border: none; border-radius: calc(var(--r-lg) - 2px);
+      background: transparent; color: var(--mute);
+      font-family: var(--font); font-size: 14px; font-weight: 600;
+      cursor: pointer; transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .loc-tab.active {
+      background: var(--canvas); color: var(--ink);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+    }
+    .loc-panel { display: none; animation: fadeup 0.3s ease forwards; }
+    .loc-panel.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <!-- ── PRIMARY NAV - sticky, canvas, ink text, pill CTA ── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="The Weight Date">
+        <div class="nav-mark"><img src="assets/logo.jpg" alt="" aria-hidden="true"></div>
+        <div class="nav-name">THE WEIGHT DATE</div>
+      </a>
+      <!-- button-primary at nav scale -->
+      <a href="tel:+918840655898" class="btn btn-primary btn-sm" aria-label="Call us">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Join Now
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── MARQUEE - canvas bg, ink text (Nike: editorial ticker) ── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-track">
+      <span class="mq-item">No False Hopes</span><span class="mq-sep">-</span>
+      <span class="mq-item">Real Results</span><span class="mq-sep">-</span>
+      <span class="mq-item">Free Diet Plans</span><span class="mq-sep">-</span>
+      <span class="mq-item">For All Genders</span><span class="mq-sep">-</span>
+      <span class="mq-item">Expert Trainers</span><span class="mq-sep">-</span>
+      <span class="mq-item">Civil Lines Prayagraj</span><span class="mq-sep">-</span>
+      <span class="mq-item">No False Hopes</span><span class="mq-sep">-</span>
+      <span class="mq-item">Real Results</span><span class="mq-sep">-</span>
+      <span class="mq-item">Free Diet Plans</span><span class="mq-sep">-</span>
+      <span class="mq-item">For All Genders</span><span class="mq-sep">-</span>
+      <span class="mq-item">Expert Trainers</span><span class="mq-sep">-</span>
+      <span class="mq-item">Civil Lines Prayagraj</span><span class="mq-sep">-</span>
+    </div>
+  </div>
+
+  <!-- ── HERO - {typography.display-campaign} burned into dark editorial tile ── -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
+      <source src="assets/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-ghost" aria-hidden="true">WD</div>
+    <div class="hero-inner">
+
+      <!-- {typography.display-campaign}: headline locked to bottom-left of tile -->
+      <h1 class="t-campaign hero-title fu fu-2">THE<br>WEIGHT<br><em>DATE</em></h1>
+
+      <p class="hero-sub fu fu-3">Prayagraj's premier fitness centre for males &amp; females. Real results, expert guidance, and a family that lifts you up.</p>
+
+      <div class="btn-row fu fu-5">
+        <a href="tel:+918840655898" class="btn btn-on-image">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/918840655898" target="_blank" rel="noopener" class="btn" style="background:rgba(255,255,255,0.1);color:#fff;border:1.5px solid rgba(255,255,255,0.22)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SERVICES - Nike product card grid ── -->
+  <!-- Services as product cards: 1:1 soft-cloud image area + metadata below -->
+  <div class="sec reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="t-eye sec-eye">What We Offer</div>
+        <h2 class="t-xl sec-title">Services</h2>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card" onclick="openLb('Strength Training','Full range of modern weight equipment for building strength and muscle - barbells, dumbbells, machines and more.')">
+          <div class="card-img">
+            <img src="assets/strength-training.jpg" alt="Loaded barbell for strength training" loading="lazy" decoding="async">
+          </div>
+          <div class="card-meta">
+            <div class="card-name">Strength Training</div>
+            <div class="card-sub">All fitness levels</div>
+            <div class="card-price">Included</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="openLb('Cardio Zone','Dedicated cardio zone with treadmills, cycles and steppers for endurance and fat loss.')">
+          <div class="card-img">
+            <img src="assets/cardio-zone.jpg" alt="Treadmill in a cardio zone" loading="lazy" decoding="async">
+          </div>
+          <div class="card-meta">
+            <div class="card-name">Cardio Zone</div>
+            <div class="card-sub">Endurance & fat burn</div>
+            <div class="card-price">Included</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="openLb('Free Diet Plans','Personalised diet charts at zero cost - tailored to your body type, goals and lifestyle.')">
+          <div class="card-img">
+            <img src="assets/diet-plans.jpg" alt="Balanced healthy meal bowl" loading="lazy" decoding="async">
+          </div>
+          <div class="card-meta">
+            <div class="card-name">Free Diet Plans</div>
+            <div class="card-sub">Personalised nutrition</div>
+            <!-- red like Nike's sale signal - used for "Free" = brand promise -->
+            <div class="card-price card-price-red">Free</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="openLb('Expert Guidance','Workout schedules, form correction and training guidance - all free with your membership.')">
+          <div class="card-img">
+            <img src="assets/expert-guidance.jpg" alt="Trainer spotting a bench press" loading="lazy" decoding="async">
+          </div>
+          <div class="card-meta">
+            <div class="card-name">Expert Guidance</div>
+            <div class="card-sub">Form & scheduling</div>
+            <div class="card-price card-price-red">Free</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="openLb('Beginner Programme','Special attention for new members - start safely, confidently and see results from day one.')">
+          <div class="card-img">
+            <img src="assets/beginner-programme.jpg" alt="Gym members supporting each other after training" loading="lazy" decoding="async">
+          </div>
+          <div class="card-meta">
+            <div class="card-name">Beginner Prog.</div>
+            <div class="card-sub">Start confidently</div>
+            <div class="card-price">Included</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="openLb('Community','Not just a gym - a closely-knit family where everyone is equally valued and supported.')">
+          <div class="card-img">
+            <img src="assets/community.jpg" alt="Gym community members celebrating together" loading="lazy" decoding="async">
+          </div>
+          <div class="card-meta">
+            <div class="card-name">Community</div>
+            <div class="card-sub">Our biggest strength</div>
+            <div class="card-price">Always</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CAMPAIGN TILE - Nike's signature editorial unit ── -->
+  <!-- Full-bleed ink section, {typography.display-campaign} burned in, white pill CTA bottom-left -->
+  <section class="campaign">
+    <div class="campaign-inner">
+      <div class="campaign-eye">Our Philosophy</div>
+      <h2 class="campaign-title">No<br>False<br>Hopes.<br>Only Real<br>Results.</h2>
+      <p class="campaign-sub">Honest expectations. Measurable outcomes. Zero hidden charges. Expert guidance from day one.</p>
+      <!-- btn-on-image: white pill anchored at bottom of editorial tile - Nike signature -->
+      <a href="tel:+918840655898" class="btn btn-on-image">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Join Now
+      </a>
+    </div>
+  </section>
+
+  <!-- ── WHY US - Nike PDP disclosure rows ── -->
+  <!-- Feature list as accordion-style disclosure rows with hairline dividers -->
+  <div class="sec reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="t-eye sec-eye">Why Choose Us</div>
+        <h2 class="t-xl sec-title">Our Promise</h2>
+      </div>
+      <div class="disc-list">
+        <div class="disc-row">
+          <div class="disc-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="disc-title">No False Hopes. Only Real Results.</div>
+            <div class="disc-desc">We set honest expectations and deliver measurable outcomes - your progress is our reputation.</div>
+          </div>
+        </div>
+        <div class="disc-row">
+          <div class="disc-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="disc-title">Zero Hidden Charges</div>
+            <div class="disc-desc">Training guidance, workout schedules and diet plans - all free. You only pay the membership fee.</div>
+          </div>
+        </div>
+        <div class="disc-row">
+          <div class="disc-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="disc-title">Special Attention to Beginners</div>
+            <div class="disc-desc">Our trainers make your first day exciting, safe and empowering - never intimidating.</div>
+          </div>
+        </div>
+        <div class="disc-row">
+          <div class="disc-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="disc-title">Eco-Friendly & Aesthetic Environment</div>
+            <div class="disc-desc">Clean interiors, great lighting, good music - designed to make you want to show up every day.</div>
+          </div>
+        </div>
+        <div class="disc-row">
+          <div class="disc-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="disc-title">Inclusive - Open to All Genders</div>
+            <div class="disc-desc">A safe, welcoming space for males and females - everyone is equally respected here.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT - soft-cloud section ── -->
+  <div class="sec sec-cloud reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="t-eye sec-eye">Who We Are</div>
+        <h2 class="t-xl sec-title">About Us</h2>
+      </div>
+
+      <!-- Tabs -->
+      <div class="about-tabs">
+        <button class="about-tab active" onclick="switchAbout('store',this)">Our Gym</button>
+        <button class="about-tab" onclick="switchAbout('owner',this)">Meet the Owner</button>
+      </div>
+
+      <!-- Panel: Our Gym -->
+      <div class="about-panel active" id="about-store">
+        <div class="about-kicker">Prayagraj, Uttar Pradesh</div>
+        <p class="about-lead">A serious training space with a family feel.</p>
+        <p class="about-body"><strong>The Weight Date</strong> is built for people who want honest guidance, consistent training, and visible progress without false promises. We are fully equipped for all levels of strength training—whether you are starting your first week, chasing a general fitness goal, or training seriously for powerlifting, our team helps you train with clarity.</p>
+        <br>
+        <p class="about-body">Every member gets attention, structure, and respect. Workout support, heavy lifting capabilities, diet guidance, and a clean, motivating environment come together to make showing up easier every day.</p>
+
+        <div class="about-proof">
+          <div class="about-proof-item">
+            <div class="about-proof-top">Nutrition</div>
+            <div>
+              <div class="about-proof-main">Free Diet Plans</div>
+              <div class="about-proof-note">Personalised charts for your goal.</div>
+            </div>
+          </div>
+          <div class="about-proof-item">
+            <div class="about-proof-top">Support</div>
+            <div>
+              <div class="about-proof-main">Beginner Friendly</div>
+              <div class="about-proof-note">Form checks and confidence from day one.</div>
+            </div>
+          </div>
+          <div class="about-proof-item">
+            <div class="about-proof-top">Pricing</div>
+            <div>
+              <div class="about-proof-main">No Hidden Charges</div>
+              <div class="about-proof-note">Training help is included with membership.</div>
+            </div>
+          </div>
+          <div class="about-proof-item">
+            <div class="about-proof-top">Space</div>
+            <div>
+              <div class="about-proof-main">All Genders</div>
+              <div class="about-proof-note">Modern equipment in a respectful environment.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-actions">
+          <a href="tel:+918840655898" class="btn btn-primary">Contact Us</a>
+          <a href="#loc-civil" class="btn btn-secondary" onclick="switchLoc('civil', document.querySelector('.loc-tab.active'))">Visit Gym</a>
+        </div>
+      </div>
+
+      <!-- Panel: Meet the Owner -->
+      <div class="about-panel" id="about-owner">
+        <div class="owner-card">
+          <div class="owner-avatar">
+            <img src="assets/owner.jpg" alt="Tarun Dev Shukla - Owner & Founder, The Weight Date">
+          </div>
+          <div class="owner-eyebrow">Owner &amp; Founder</div>
+          <div class="owner-name">Tarun Dev Shukla</div>
+          <div class="owner-tags">
+            <span class="owner-tag">✓ Fitness Expert</span>
+            <span class="owner-tag">✓ Prayagraj-Based</span>
+            <span class="owner-tag">✓ Member-First</span>
+          </div>
+          <p class="owner-bio">Passionate about helping people transform their lives through consistent training, honest guidance, and real results. Built The Weight Date to be a gym that truly cares — no false hopes, only progress.</p>
+          <div class="owner-quote">
+            <div class="owner-quote-bar"></div>
+            <div class="owner-quote-text">"Train hard, stay consistent — real results take real effort."</div>
+          </div>
+          <div class="owner-actions">
+            <a href="tel:+918840655898" class="btn btn-primary">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              Talk to Tarun
+            </a>
+            <a href="https://www.instagram.com/shukla_tarun05/" target="_blank" rel="noopener" class="btn btn-ghost">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── TIMINGS - Nike PDP disclosure row pattern ── -->
+  <div class="sec reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="t-eye sec-eye">Hours</div>
+        <h2 class="t-xl sec-title">Timings</h2>
+      </div>
+      <div class="timing-list" id="timings-list"></div>
+    </div>
+  </div>
+
+  <!-- ── LOCATION ── -->
+  <div class="sec reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="t-eye sec-eye">Find Us</div>
+        <h2 class="t-xl sec-title">Location</h2>
+      </div>
+
+      <div class="loc-tabs">
+        <button class="loc-tab active" onclick="switchLoc('civil', this)">Civil Lines</button>
+        <button class="loc-tab" onclick="switchLoc('tagore', this)">Tagore Town</button>
+      </div>
+
+      <!-- Civil Lines Panel -->
+      <div class="loc-panel active" id="loc-civil">
+        <div class="location-grid" style="grid-template-columns: 1fr;">
+          <div class="branch-card">
+            <div class="branch-name">Civil Lines Branch</div>
+            <div class="map-wrap">
+              <button class="map-placeholder" onclick="loadMap(this,'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.355839180404!2d81.83593467539042!3d25.459790877542893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acb0ebc01b463%3A0x2ff834cfca0a2735!2sThe%20Weight%20Date!5e0!3m2!1sen!2sin!4v1780083677516!5m2!1sen!2sin','The Weight Date Civil Lines branch map')" aria-label="Load interactive map for Civil Lines branch">
+                <div class="map-placeholder-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <div class="map-placeholder-label">Tap to load map</div>
+                <div class="map-placeholder-sub">Civil Lines, Prayagraj</div>
+              </button>
+            </div>
+            <div class="location-info">
+              <div style="height:1px;background:var(--hairline)"></div>
+              <div class="addr-list">
+                <div class="addr-row">
+                  <div class="addr-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                  <div>
+                    <div class="addr-label">Address</div>
+                    <div class="addr-val">128, Thornhill Rd, Dhobi Ghat,<br>Vivek Vihar Colony, Civil Lines,<br>Prayagraj, Uttar Pradesh 211002</div>
+                  </div>
+                </div>
+                <div class="addr-row">
+                  <div class="addr-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+                  <div>
+                    <div class="addr-label">Phone</div>
+                    <a href="tel:+918840655898" class="addr-phone">+91 88406 55898</a>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-row">
+                <a href="tel:+918840655898" class="btn btn-primary">Call Now</a>
+                <a href="https://maps.google.com/?q=The+Weight+Date+Civil+Lines+Prayagraj" target="_blank" rel="noopener" class="btn btn-secondary">Get Directions</a>
+              </div>
+              <div class="btn-row" style="margin-top:10px">
+                <a href="https://www.instagram.com/theweightdate/" target="_blank" rel="noopener" class="btn btn-ghost" style="gap:8px">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+                  Instagram
+                </a>
+                <a href="https://www.facebook.com/theweightdate/" target="_blank" rel="noopener" class="btn btn-ghost" style="gap:8px">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                  Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tagore Town Panel -->
+      <div class="loc-panel" id="loc-tagore">
+        <div class="location-grid" style="grid-template-columns: 1fr;">
+          <div class="branch-card">
+            <div class="branch-name">Tagore Town Branch</div>
+            <div class="map-wrap">
+              <button class="map-placeholder" onclick="loadMap(this,'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.5831023373353!2d81.85941918371338!3d25.452197863450426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acbf9ca9fbf5b%3A0x70dfe075f0042ee8!2sThe%20Weight%20Date%20tagore%20town%20branch!5e0!3m2!1sen!2sin!4v1780083719081!5m2!1sen!2sin','The Weight Date Tagore Town branch map')" aria-label="Load interactive map for Tagore Town branch">
+                <div class="map-placeholder-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <div class="map-placeholder-label">Tap to load map</div>
+                <div class="map-placeholder-sub">Tagore Town, Prayagraj</div>
+              </button>
+            </div>
+            <div class="location-info">
+              <div style="height:1px;background:var(--hairline)"></div>
+              <div class="addr-list">
+                <div class="addr-row">
+                  <div class="addr-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                  <div>
+                    <div class="addr-label">Address</div>
+                    <div class="addr-val">The Weight Date Tagore Town Branch,<br>Tagore Town, Prayagraj,<br>Uttar Pradesh</div>
+                  </div>
+                </div>
+                <div class="addr-row">
+                  <div class="addr-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+                  <div>
+                    <div class="addr-label">Phone</div>
+                    <a href="tel:+918840655898" class="addr-phone">+91 88406 55898</a>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-row">
+                <a href="tel:+918840655898" class="btn btn-primary">Call Now</a>
+                <a href="https://maps.google.com/?q=The+Weight+Date+Tagore+Town+Branch+Prayagraj" target="_blank" rel="noopener" class="btn btn-secondary">Get Directions</a>
+              </div>
+              <div class="btn-row" style="margin-top:10px">
+                <a href="https://www.instagram.com/theweightdate_tagoretown/" target="_blank" rel="noopener" class="btn btn-ghost" style="gap:8px">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+                  Instagram
+                </a>
+                <a href="https://www.facebook.com/people/The-Weight-Date-gym-tagore-town-branch/61569815562073/" target="_blank" rel="noopener" class="btn btn-ghost" style="gap:8px">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                  Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="gap"></div>
+
+  <!-- ── FOOTER - Nike column footer: canvas, 1px top hairline ── -->
+  <footer class="footer">
+    <video class="footer-video" muted loop playsinline preload="none" poster="assets/footer-poster.jpg" data-src="assets/footer-bg.mp4" aria-hidden="true"></video>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <div class="footer-mark"><img src="assets/logo.jpg" alt="" aria-hidden="true"></div>
+          <div class="footer-name">THE WEIGHT DATE</div>
+        </div>
+        <p class="footer-addr">128, Thornhill Rd, Civil Lines<br>Prayagraj, Uttar Pradesh 211002</p>
+        <a href="tel:+918840655898" class="footer-tel">+91 88406 55898</a>
+        <!-- Social icon-circular buttons – grouped by branch -->
+        <div class="footer-social-wrap">
+          <!-- Civil Lines row -->
+          <div class="footer-branch-social">
+            <span class="footer-social-lbl">Civil Lines</span>
+            <div class="footer-soc-group">
+              <a href="https://www.instagram.com/theweightdate/" target="_blank" rel="noopener" class="footer-soc" aria-label="Instagram – Civil Lines">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://www.facebook.com/theweightdate/" target="_blank" rel="noopener" class="footer-soc" aria-label="Facebook – Civil Lines">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- Tagore Town row -->
+          <div class="footer-branch-social">
+            <span class="footer-social-lbl">Tagore Town</span>
+            <div class="footer-soc-group">
+              <a href="https://www.instagram.com/theweightdate_tagoretown/" target="_blank" rel="noopener" class="footer-soc" aria-label="Instagram – Tagore Town">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://www.facebook.com/people/The-Weight-Date-gym-tagore-town-branch/61569815562073/" target="_blank" rel="noopener" class="footer-soc" aria-label="Facebook – Tagore Town">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- Shared WhatsApp pill -->
+          <a href="https://wa.me/918840655898" target="_blank" rel="noopener" class="btn" style="background:rgba(255,255,255,0.08);color:#fff;border:1.5px solid rgba(255,255,255,0.22);gap:9px;padding:0 22px;height:42px;font-size:14px;margin-top:2px" aria-label="WhatsApp Us">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+        <div class="footer-rule"></div>
+        <!-- {typography.utility-xs} legal row -->
+        <div class="footer-legal">
+          © 2026 The Weight Date · Prayagraj · All rights reserved
+          <div class="footer-policy-row">
+            <button class="footer-policy-btn" onclick="openLegal('privacy')">Privacy Policy</button>
+            <span class="footer-policy-sep">·</span>
+            <button class="footer-policy-btn" onclick="openLegal('terms')">Terms of Service</button>
+            <span class="footer-policy-sep">·</span>
+            <button class="footer-policy-btn" onclick="openLegal('refund')">Refund Policy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- ── SERVICE LIGHTBOX - Nike bottom sheet ── -->
+  <div class="lb" id="lb" onclick="closeLb(event)" role="dialog" aria-modal="true">
+    <div class="lb-sheet">
+      <div class="lb-handle"></div>
+      <button class="lb-close" onclick="closeLb()" aria-label="Close">✕</button>
+      <div class="lb-name" id="lb-name"></div>
+      <div class="lb-desc" id="lb-desc"></div>
+      <a href="https://wa.me/918840655898" target="_blank" rel="noopener" class="btn btn-primary" style="width:fit-content;margin-top:8px">Enquire on WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- ── FITBOT LAUNCHER - ink button-icon-circular ── -->
+  <button id="jlauncher" onclick="toggleJudy()" aria-label="Chat with our assistant">
+    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    <div class="jnotif"></div>
+  </button>
+
+  <!-- ── FITBOT PANEL - Nike ink header, canvas body ── -->
+  <div id="jpanel" role="dialog" aria-modal="true" aria-label="FitBot chat">
+    <div id="jhead">
+      <div class="javatar">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        <div class="jonline"></div>
+      </div>
+      <div class="jinfo">
+        <div class="jname">FITBOT</div>
+        <div class="jsub">The Weight Date</div>
+      </div>
+      <button id="jclose" onclick="toggleJudy()">✕</button>
+    </div>
+    <div id="jbody"></div>
+    <div id="jchips"></div>
+    <div id="jinputrow">
+      <!-- Nike search-pill input: soft-cloud bg, rounded-md (24px) -->
+      <input id="jinput" type="text" placeholder="Ask anything…" autocomplete="off"/>
+      <button id="jsend" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+    </div>
+  </div>
+
+  <script>
+    /* ── MAP LOADER ── */
+    function loadMap(btn, src, title) {
+      const wrap = btn.parentElement;
+      const iframe = document.createElement('iframe');
+      iframe.src = src;
+      iframe.title = title;
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'no-referrer-when-downgrade';
+      iframe.style.cssText = 'width:100%;height:100%;border:0;display:block';
+      wrap.replaceChild(iframe, btn);
+    }
+
+    /* ── TIMINGS ── */
+    const TIMINGS=[
+      {d:'Monday',    t:'6:00 AM - 10:00 PM', c:false},
+      {d:'Tuesday',   t:'6:00 AM - 10:00 PM', c:false},
+      {d:'Wednesday', t:'6:00 AM - 10:00 PM', c:false},
+      {d:'Thursday',  t:'6:00 AM - 10:00 PM', c:false},
+      {d:'Friday',    t:'5:30 AM - 10:00 PM', c:false},
+      {d:'Saturday',  t:'6:00 AM - 10:00 PM', c:false},
+      {d:'Sunday',    t:'Closed',              c:true },
+    ];
+    const TODAY=new Date().getDay();
+    const DM={Monday:1,Tuesday:2,Wednesday:3,Thursday:4,Friday:5,Saturday:6,Sunday:0};
+    const TL=document.getElementById('timings-list');
+    TIMINGS.forEach(t=>{
+      const isToday=TODAY===DM[t.d];
+      const row=document.createElement('div');
+      row.className='timing-row'+(isToday?' today':'');
+      row.innerHTML=`<span class="timing-day">${t.d}${isToday?'<span class="timing-today">Today</span>':''}</span><span class="${t.c?'timing-closed':'timing-time'}">${t.t}</span>`;
+      TL.appendChild(row);
+    });
+
+    /* ── LIGHTBOX ── */
+    function openLb(name,desc){
+      document.getElementById('lb-name').textContent=name;
+      document.getElementById('lb-desc').textContent=desc;
+      document.getElementById('lb').classList.add('open');
+      document.body.style.overflow='hidden';
+    }
+    function closeLb(e){
+      if(e&&e.target!==document.getElementById('lb')&&!e.target.classList.contains('lb-close'))return;
+      document.getElementById('lb').classList.remove('open');
+      document.body.style.overflow='';
+    }
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape'){
+        document.getElementById('lb').classList.remove('open');
+        document.getElementById('jpanel').classList.remove('open');
+        document.body.style.overflow='';
+      }
+    });
+
+    /* ── SCROLL REVEAL ── */
+    const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0.06});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    /* ── VIDEO LOADING ── */
+    const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduceMotion){
+      document.querySelector('.hero-video')?.play?.().catch(()=>{});
+      const footerVideo=document.querySelector('.footer-video');
+      if(footerVideo){
+        const loadFooterVideo=()=>{
+          if(footerVideo.dataset.loaded)return;
+          footerVideo.dataset.loaded='true';
+          const src=document.createElement('source');
+          src.src=footerVideo.dataset.src;
+          src.type='video/mp4';
+          footerVideo.appendChild(src);
+          footerVideo.load();
+          footerVideo.addEventListener('canplay',()=>{
+            footerVideo.classList.add('ready');
+            footerVideo.play().catch(()=>{});
+          },{once:true});
+        };
+        const videoObs=new IntersectionObserver(entries=>{
+          entries.forEach(entry=>{
+            if(entry.isIntersecting){
+              loadFooterVideo();
+              videoObs.disconnect();
+            }
+          });
+        },{rootMargin:'420px 0px'});
+        videoObs.observe(footerVideo);
+      }
+    }
+
+    /* ── FITBOT ── */
+    const WA='918840655898';
+    const KB={
+      greeting:{a:`Hi! I'm <strong>FitBot</strong> from <strong>The Weight Date</strong>, Prayagraj 💪<br><br>We're rated <strong>5.0 ★ across 800+ reviews</strong> - open to all genders, free diet plans, expert training, zero hidden charges.`,c:['Timings?','Where are you?','Fees?','Free diet plans?','Contact']},
+      timings:{a:`<strong>Mon-Thu & Sat:</strong> 6:00 AM - 10:00 PM<br><strong>Friday:</strong> 5:30 AM - 10:00 PM<br><strong>Sunday:</strong> Closed`,c:['Where are you?','Contact','Fees?']},
+      location:{a:`<strong>Civil Lines:</strong> 128, Thornhill Rd, Civil Lines, Prayagraj - near Hot Stuff Chauraha.<br><strong>Tagore Town:</strong> The Weight Date Tagore Town Branch, Tagore Town, Prayagraj.`,c:['Get directions','Timings?','Contact']},
+      directions:{a:'Opening Google Maps now.',c:['Timings?','Contact'],x:()=>window.open('https://maps.google.com/?q=The+Weight+Date+gym+Civil+Lines+Prayagraj','_blank')},
+      fees:{a:`Fees are <strong>very affordable</strong> - call or WhatsApp for current rates. Training guidance, diet plans & workout schedules are all <strong>free</strong> with membership.`,c:['Contact','Free diet plans?','Timings?']},
+      diet:{a:`Yes! <strong>Free personalised diet charts</strong> tailored to your body type and goals - no extra charge.`,c:['Fees?','Contact','Timings?']},
+      training:{a:`<strong>Expert guidance on form, schedules and routines</strong> - included free. Special care for beginners!`,c:['Free diet plans?','Contact','Fees?']},
+      beginner:{a:`Absolute beginners are very welcome! <strong>Special attention</strong> to ensure you start safely and confidently from day one.`,c:['Fees?','Contact','Timings?']},
+      contact:{a:`📞 <strong>+91 88406 55898</strong><br>📸 <strong>@theweightdate</strong> (Civil Lines)<br>📸 <strong>@theweightdate_tagoretown</strong> (Tagore Town)`,c:['Timings?','Where are you?','Fees?']},
+      thanks:{a:`You're welcome! Come visit anytime 💪`,c:['Timings?','Contact']},
+      review:{a:`<strong>5.0 ★ with 800+ Google reviews</strong> - members say it feels like a second home.`,c:['Timings?','Fees?','Contact']},
+    };
+    const RULES=[
+      [['time','timing','open','close','hour','when','sunday','monday','friday','kab'],'timings'],
+      [['where','location','address','civil','prayagraj','find'],'location'],
+      [['direction','map','navigate','rasta'],'directions'],
+      [['fee','fees','price','cost','charge','membership','rate','kitna'],'fees'],
+      [['diet','nutrition','food','chart','meal'],'diet'],
+      [['train','guidance','workout','schedule','routine','form'],'training'],
+      [['beginner','new','start','first','basic'],'beginner'],
+      [['contact','call','phone','whatsapp','instagram','reach'],'contact'],
+      [['thank','thanks','great','awesome','perfect'],'thanks'],
+      [['review','rating','star'],'review'],
+      [['hi','hello','hey','namaste','who'],'greeting'],
+    ];
+    const CM={'Timings?':'timings','Where are you?':'location','Get directions':'directions','Fees?':'fees','Free diet plans?':'diet','Contact':'contact'};
+    function mi(m){const l=m.toLowerCase();for(const[kws,k]of RULES)if(kws.some(w=>l.includes(w)))return k;return null;}
+    function addMsg(html,type){const b=document.getElementById('jbody');const el=document.createElement('div');el.className='jmsg '+type;el.innerHTML=html;b.appendChild(el);b.scrollTop=b.scrollHeight;}
+    function setChips(list){const c=document.getElementById('jchips');c.innerHTML='';list.forEach(lbl=>{const b=document.createElement('button');b.className='jchip';b.textContent=lbl;b.onclick=()=>{addMsg(lbl,'user');hk(CM[lbl]||mi(lbl));};c.appendChild(b);});}
+    function showThink(){const b=document.getElementById('jbody');const el=document.createElement('div');el.className='jthink';el.id='jtyp';el.innerHTML='<div class="jdots"><span></span><span></span><span></span></div>';b.appendChild(el);b.scrollTop=b.scrollHeight;}
+    function remThink(){document.getElementById('jtyp')?.remove();}
+    function hk(key){if(!key){fallback();return;}const e=KB[key];if(!e){fallback();return;}showThink();setTimeout(()=>{remThink();addMsg(e.a,'bot');if(e.x)setTimeout(e.x,300);setChips(e.c||['Contact','Timings?']);},520);}
+    function fallback(){showThink();setTimeout(()=>{remThink();addMsg('Let me connect you with our team!','bot');setChips(['Contact','Timings?']);setTimeout(()=>window.open(`https://wa.me/${WA}`,'_blank'),600);},520);}
+    function send(){const i=document.getElementById('jinput');const m=i.value.trim();if(!m)return;addMsg(m,'user');i.value='';hk(mi(m));}
+    document.getElementById('jsend').onclick=send;
+    document.getElementById('jinput').addEventListener('keydown',e=>{if(e.key==='Enter')send();});
+    let judyOpen=false;
+    function toggleJudy(){const p=document.getElementById('jpanel');p.classList.toggle('open');if(p.classList.contains('open')&&!judyOpen){judyOpen=true;showThink();setTimeout(()=>{remThink();addMsg(KB.greeting.a,'bot');setChips(KB.greeting.c);},900);}}
+
+    /* ── SAVE CONTACT ── */
+    function saveContact(){
+      const v=['BEGIN:VCARD','VERSION:3.0','FN:The Weight Date','ORG:The Weight Date','TEL;TYPE=CELL:+918840655898','ADR;TYPE=WORK:;;128\\, Thornhill Rd;Prayagraj;UP;211002;India','URL:https://www.instagram.com/theweightdate/','END:VCARD'].join('\r\n');
+      const b=new Blob([v],{type:'text/vcard'});const u=URL.createObjectURL(b);
+      const a=document.createElement('a');a.href=u;a.download='The_Weight_Date.vcf';
+      document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u);
+    }
+
+    /* ── LOCATION TABS ── */
+    function switchLoc(panel, btn) {
+      document.querySelectorAll('.loc-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.loc-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById('loc-' + panel).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    /* ── ABOUT TABS ── */
+    function switchAbout(panel, btn) {
+      document.querySelectorAll('.about-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.about-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById('about-' + panel).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    /* ── HAPTICS ── */
+    document.addEventListener('pointerdown',e=>{
+      const t=e.target.closest('a,button,.card,.jchip');
+      if(t&&navigator.vibrate)navigator.vibrate(8);
+    },{passive:true});
+
+    /* ── CARD ENTRANCE STAGGER ── */
+    document.querySelectorAll('.card').forEach((card, i) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(18px)';
+      card.style.transition = `opacity 0.38s ease ${i * 60}ms, transform 0.38s cubic-bezier(0.25,0.46,0.45,0.94) ${i * 60}ms, box-shadow 0.22s ease`;
+      const enter = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          card.style.opacity = '1';
+          card.style.transform = '';
+          enter.disconnect();
+          /* after entrance, hand off transition control to hover/tilt */
+          setTimeout(() => {
+            card.style.transition = 'box-shadow 0.22s ease, opacity 0.15s';
+          }, 400 + i * 60);
+        }
+      }, { threshold: 0.1 });
+      enter.observe(card);
+    });
+
+    /* ── 3D CARD TILT (pointer/mouse devices only) ── */
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      const TILT = 10;       /* max degrees */
+      const LIFT = 'perspective(700px) translateY(-5px) scale(1.03)';
+      document.querySelectorAll('.card').forEach(card => {
+        let raf;
+        card.addEventListener('pointerenter', () => {
+          card.style.transition = 'box-shadow 0.22s ease';
+        });
+        card.addEventListener('pointermove', e => {
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(() => {
+            const r   = card.getBoundingClientRect();
+            const px  = (e.clientX - r.left)  / r.width  - 0.5;  /* -0.5 → 0.5 */
+            const py  = (e.clientY - r.top)    / r.height - 0.5;
+            card.style.transform =
+              `perspective(700px) rotateY(${px * TILT * 2}deg) rotateX(${-py * TILT}deg) translateY(-5px) scale(1.03)`;
+          });
+        });
+        card.addEventListener('pointerleave', () => {
+          cancelAnimationFrame(raf);
+          card.style.transition = 'transform 0.45s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.22s ease';
+          card.style.transform = '';
+          /* snap transition back after spring settles */
+          setTimeout(() => { card.style.transition = 'box-shadow 0.22s ease, opacity 0.15s'; }, 460);
+        });
+      });
+    }
+
+    /* ── LEGAL MODAL ── */
+    const LM_TITLES = { privacy: 'Privacy Policy', terms: 'Terms of Service', refund: 'Refund Policy' };
+    function openLegal(id) {
+      document.querySelectorAll('.lm-doc').forEach(d => d.classList.remove('active'));
+      document.getElementById('lm-' + id).classList.add('active');
+      document.getElementById('lm-title').textContent = LM_TITLES[id] || id;
+      document.getElementById('lm-body').scrollTop = 0;
+      document.getElementById('lm').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLegal() {
+      document.getElementById('lm').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    /* Close on Escape (extend existing keydown listener) */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLegal();
+    });
+  </script>
+
+  <!-- ── LEGAL MODAL ── -->
+  <div id="lm" role="dialog" aria-modal="true" aria-labelledby="lm-title">
+    <div class="lm-overlay" onclick="closeLegal()"></div>
+    <div class="lm-panel">
+      <div class="lm-handle"></div>
+      <div class="lm-header">
+        <div class="lm-title" id="lm-title"></div>
+        <button class="lm-close" onclick="closeLegal()" aria-label="Close">✕</button>
+      </div>
+      <div class="lm-body" id="lm-body">
+
+        <!-- ── PRIVACY POLICY ── -->
+        <div class="lm-doc" id="lm-privacy">
+          <p class="lm-meta">Effective Date: 1 January 2026 &nbsp;|&nbsp; Last Revised: 1 January 2026</p>
+
+          <h3>1. Definitions</h3>
+          <ol>
+            <li><strong>&ldquo;Act&rdquo;</strong> means the Information Technology Act, 2000, as amended from time to time.</li>
+            <li><strong>&ldquo;Company&rdquo;, &ldquo;We&rdquo;, &ldquo;Us&rdquo;, &ldquo;Our&rdquo;</strong> means The Weight Date, a fitness establishment operated from 128, Thornhill Road, Civil Lines, Prayagraj, Uttar Pradesh 211002.</li>
+            <li><strong>&ldquo;Member&rdquo;, &ldquo;You&rdquo;</strong> means any natural person who accesses the Website or avails the Services.</li>
+            <li><strong>&ldquo;Personal Information&rdquo;</strong> has the meaning ascribed under Rule 2(1)(i) of the SPDI Rules.</li>
+            <li><strong>&ldquo;SPDI&rdquo;</strong> means Sensitive Personal Data or Information as defined under Rule 3 of the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 (&ldquo;SPDI Rules&rdquo;).</li>
+            <li><strong>&ldquo;Services&rdquo;</strong> means fitness training, dietary counselling, and all ancillary services provided at the Company&rsquo;s premises.</li>
+            <li><strong>&ldquo;Website&rdquo;</strong> means the web application and any digital presence operated by the Company.</li>
+          </ol>
+
+          <h3>2. Applicability and Consent</h3>
+          <ol>
+            <li>This Policy is published in compliance with Section 43A of the Act, Rule 4 of the SPDI Rules, and the guidelines of the Ministry of Electronics and Information Technology.</li>
+            <li>By accessing the Website or enrolling as a Member, You unconditionally consent to the collection, storage, processing, and transfer of Your Personal Information and SPDI as described herein.</li>
+            <li>Members below the age of 18 must obtain verified consent from a parent or legal guardian prior to providing any information.</li>
+          </ol>
+
+          <h3>3. Categories of Information Collected</h3>
+          <ol>
+            <li><strong>Identity Data:</strong> Full legal name, date of birth, government-issued identification number (optional).</li>
+            <li><strong>Contact Data:</strong> Mobile number, email address, residential address.</li>
+            <li><strong>Health and Physical Data (SPDI):</strong> Body weight, height, fitness goals, medical conditions, dietary requirements, and health history voluntarily disclosed for the purpose of service personalisation.</li>
+            <li><strong>Financial Data:</strong> Payment instrument type and transaction reference; no card credentials or banking details are stored by the Company.</li>
+            <li><strong>Technical Data:</strong> IP address, browser type and version, device identifiers, pages visited, and referral URLs.</li>
+            <li><strong>Usage Data:</strong> Attendance records and service utilisation patterns.</li>
+          </ol>
+
+          <h3>4. Purpose and Use of Information</h3>
+          <ol>
+            <li>Information collected shall be used exclusively for the following purposes:
+              <ol class="alpha">
+                <li>Enrolment, membership administration, and renewal processing.</li>
+                <li>Provision and personalisation of fitness and nutritional services.</li>
+                <li>Communication of service updates, schedule changes, and safety notices.</li>
+                <li>Compliance with applicable law, court orders, or demands of competent authorities.</li>
+                <li>Internal analytics for service improvement, conducted in anonymised or aggregated form only.</li>
+              </ol>
+            </li>
+            <li>Information shall not be used for unsolicited commercial communication except with explicit opt-in consent under the Telecom Commercial Communications Customer Preference Regulations, 2018.</li>
+          </ol>
+
+          <h3>5. Disclosure and Transfer</h3>
+          <ol>
+            <li>The Company does not sell, trade, or transfer Personal Information or SPDI to third parties except:
+              <ol class="alpha">
+                <li><strong>Service Providers:</strong> Third-party processors engaged for payment processing, IT infrastructure, and communication delivery, bound by confidentiality obligations not less stringent than this Policy.</li>
+                <li><strong>Legal Compulsion:</strong> Disclosure pursuant to a lawful order under the Act, the Code of Criminal Procedure, 1973, or any other applicable statute.</li>
+                <li><strong>Business Transfer:</strong> In the event of merger, acquisition, or assignment, subject to the acquirer assuming obligations equivalent to this Policy.</li>
+              </ol>
+            </li>
+            <li>No transfer of SPDI shall be made to any entity that does not maintain equivalent data-protection standards, unless the Member provides written consent or such transfer is necessary for performance of a lawful contract.</li>
+          </ol>
+
+          <h3>6. Security Practices and Procedures</h3>
+          <ol>
+            <li>The Company has implemented reasonable security practices and procedures as mandated under Rule 8 of the SPDI Rules, including access controls, physical security at data-storage premises, and periodic review of security practices.</li>
+            <li>The Company does not warrant absolute security against unauthorised third-party access. Members must not share login credentials or one-time passwords with any person.</li>
+          </ol>
+
+          <h3>7. Retention</h3>
+          <ol>
+            <li>Personal Information shall be retained for the duration of membership and for three (3) years thereafter for legal and accounting purposes.</li>
+            <li>SPDI shall be retained only for as long as necessary to fulfil the purpose for which it was collected or as required by applicable law, whichever is longer.</li>
+            <li>Upon expiry of the retention period or receipt of a verified deletion request, data shall be anonymised or securely destroyed.</li>
+          </ol>
+
+          <h3>8. Member Rights</h3>
+          <ol>
+            <li><strong>Right to Review:</strong> Members may request access to Personal Information held by the Company in writing to the Grievance Officer.</li>
+            <li><strong>Right to Correction:</strong> Members may request correction of inaccurate or incomplete data.</li>
+            <li><strong>Withdrawal of Consent:</strong> Members may withdraw consent for use of SPDI at any time; withdrawal may result in the Company&rsquo;s inability to provide certain Services.</li>
+          </ol>
+
+          <h3>9. Cookies and Tracking Technologies</h3>
+          <ol>
+            <li>The Website may use session and persistent cookies and similar technologies for functional and analytical purposes.</li>
+            <li>Members may configure their browser to refuse cookies; certain Website features may be affected as a result.</li>
+            <li>The Company does not employ third-party behavioural advertising trackers.</li>
+          </ol>
+
+          <h3>10. Grievance Officer</h3>
+          <p>In accordance with Rule 5(9) of the SPDI Rules, the designated Grievance Officer is:</p>
+          <div class="lm-grievance">
+            <strong>Name:</strong> Tarun Dev Shukla<br>
+            <strong>Designation:</strong> Owner &amp; Founder, The Weight Date<br>
+            <strong>Address:</strong> 128, Thornhill Road, Civil Lines, Prayagraj, Uttar Pradesh 211002<br>
+            <strong>Contact:</strong> +91 88406 55898
+          </div>
+          <ol>
+            <li>Complaints must be submitted in writing. The Grievance Officer shall acknowledge within 24 hours and resolve within 30 days of receipt, pursuant to Rule 5(9).</li>
+          </ol>
+
+          <h3>11. Amendments</h3>
+          <ol>
+            <li>The Company reserves the right to amend this Policy at any time by updating the &ldquo;Last Revised&rdquo; date on the Website.</li>
+            <li>Continued use of the Services following the posting of amendments constitutes acceptance of the revised Policy.</li>
+          </ol>
+
+          <h3>12. Governing Law and Jurisdiction</h3>
+          <ol>
+            <li>This Policy is governed by the laws of India, including the Information Technology Act, 2000 and the SPDI Rules, 2011.</li>
+            <li>All disputes arising from or relating to this Policy shall be subject to the exclusive jurisdiction of the competent courts at Prayagraj, Uttar Pradesh.</li>
+          </ol>
+        </div><!-- /lm-privacy -->
+
+        <!-- ── TERMS OF SERVICE ── -->
+        <div class="lm-doc" id="lm-terms">
+          <p class="lm-meta">Effective Date: 1 January 2026 &nbsp;|&nbsp; Last Revised: 1 January 2026</p>
+
+          <h3>1. Definitions</h3>
+          <ol>
+            <li><strong>&ldquo;Agreement&rdquo;</strong> means these Terms of Service together with all policies incorporated by reference, including the Privacy Policy and Refund Policy.</li>
+            <li><strong>&ldquo;Company&rdquo;</strong> means The Weight Date, operating from 128, Thornhill Road, Civil Lines, Prayagraj, Uttar Pradesh 211002.</li>
+            <li><strong>&ldquo;Establishment&rdquo;</strong> means any physical premises operated by the Company at which Services are rendered.</li>
+            <li><strong>&ldquo;Member&rdquo;</strong> means a natural person who has paid the applicable Fee and been enrolled by the Company.</li>
+            <li><strong>&ldquo;Membership&rdquo;</strong> means a non-transferable, personal right to use the Establishment and Services for the duration specified in the applicable membership plan.</li>
+            <li><strong>&ldquo;Services&rdquo;</strong> means fitness training facilities, equipment access, dietary counselling, personal or group training sessions, and all ancillary services offered by the Company.</li>
+            <li><strong>&ldquo;Fee&rdquo;</strong> means the membership subscription amount and any ancillary charges payable as communicated at the time of enrolment.</li>
+            <li><strong>&ldquo;Force Majeure Event&rdquo;</strong> means any event beyond the Company&rsquo;s reasonable control, including acts of God, pandemic, governmental order, fire, or natural disaster.</li>
+          </ol>
+
+          <h3>2. Acceptance of Terms</h3>
+          <ol>
+            <li>These Terms constitute a legally binding contract under the Indian Contract Act, 1872.</li>
+            <li>Enrolment as a Member, whether in-person or via any electronic medium, constitutes unconditional acceptance of this Agreement.</li>
+            <li>Where the Member is a minor (below 18 years), these Terms must be accepted by a parent or legal guardian who shall be jointly liable for the Member&rsquo;s conduct and obligations.</li>
+          </ol>
+
+          <h3>3. Membership and Access</h3>
+          <ol>
+            <li>Membership plans, durations, and Fees are communicated at the time of enrolment and are subject to revision with 15 days&rsquo; prior notice.</li>
+            <li>Membership is strictly personal and non-transferable. The Member shall not permit any other person to use their Membership credentials or access rights.</li>
+            <li>The Company reserves the right to refuse or revoke Membership subject to the provisions of Clause 9.</li>
+            <li>The Company may introduce, modify, or discontinue any Service at its sole discretion without liability.</li>
+          </ol>
+
+          <h3>4. Payment Obligations</h3>
+          <ol>
+            <li>Fees are payable in advance for the chosen membership period. Membership commences on the date of receipt of cleared funds.</li>
+            <li>The Company does not extend credit. Unpaid Fees shall result in suspension of access pending clearance.</li>
+            <li>All amounts are inclusive of applicable Goods and Services Tax (GST) unless expressly stated otherwise at point of sale.</li>
+          </ol>
+
+          <h3>5. Consumer Protection (E-Commerce) Rules, 2020 — Mandatory Disclosures</h3>
+          <ol>
+            <li>In compliance with Rules 4 and 5 of the Consumer Protection (E-Commerce) Rules, 2020, the following information is disclosed:
+              <ol class="alpha">
+                <li><strong>Legal Name:</strong> The Weight Date</li>
+                <li><strong>Principal Place of Business:</strong> 128, Thornhill Road, Civil Lines, Prayagraj, Uttar Pradesh 211002</li>
+                <li><strong>Grievance Contact:</strong> +91 88406 55898</li>
+                <li><strong>Nature of Business:</strong> Physical fitness establishment providing gymnasium access, dietary counselling, and personal training services.</li>
+                <li><strong>Pricing:</strong> All prices communicated at the point of sale are accurate, complete, and inclusive of applicable taxes.</li>
+              </ol>
+            </li>
+          </ol>
+
+          <h3>6. Health, Safety, and Medical Disclaimer</h3>
+          <ol>
+            <li>The Member warrants that they are in good physical health and are not aware of any medical condition that would prevent or impair safe participation in physical exercise.</li>
+            <li>The Company strongly advises Members to obtain medical clearance from a qualified physician prior to commencing any exercise programme.</li>
+            <li>The Member acknowledges and accepts all inherent risks of physical exercise and gymnasium equipment use, including risk of physical injury.</li>
+            <li>Company staff are not licensed medical practitioners. No advice or recommendation provided by staff constitutes medical advice, diagnosis, or treatment.</li>
+            <li>The Member shall immediately notify Company staff of any medical emergency, pre-existing condition, or physical discomfort arising during use of the Establishment.</li>
+          </ol>
+
+          <h3>7. Code of Conduct</h3>
+          <ol>
+            <li>Members shall at all times:
+              <ol class="alpha">
+                <li>Use equipment in a safe and responsible manner and return it to designated areas after use.</li>
+                <li>Maintain personal hygiene and wear appropriate sportswear within the Establishment.</li>
+                <li>Treat all members and Company staff with respect and courtesy.</li>
+                <li>Comply with all posted rules, instructions, and guidelines within the Establishment.</li>
+              </ol>
+            </li>
+            <li>The Company reserves the right to immediately terminate the Membership of any person who:
+              <ol class="alpha">
+                <li>Engages in aggressive, abusive, threatening, or harassing conduct towards any person.</li>
+                <li>Causes wilful damage to equipment, property, or fixtures.</li>
+                <li>Uses, possesses, or distributes controlled substances or alcohol on the premises.</li>
+                <li>Engages in conduct constituting a criminal offence under applicable Indian law.</li>
+              </ol>
+            </li>
+          </ol>
+
+          <h3>8. Limitation of Liability</h3>
+          <ol>
+            <li>To the maximum extent permitted by applicable Indian law:
+              <ol class="alpha">
+                <li>The Company shall not be liable for any indirect, incidental, special, or consequential loss arising from use of the Services.</li>
+                <li>The Company&rsquo;s aggregate liability for any claim shall not exceed the Fees paid by the Member for the calendar month in which the cause of action arose.</li>
+                <li>The Company accepts no liability for loss, theft, or damage to Members&rsquo; personal property within the Establishment.</li>
+              </ol>
+            </li>
+            <li>Nothing in this Clause limits liability for death, personal injury caused by the Company&rsquo;s gross negligence, or fraudulent misrepresentation.</li>
+          </ol>
+
+          <h3>9. Suspension and Termination</h3>
+          <ol>
+            <li>The Company may suspend or terminate a Membership with immediate effect upon:
+              <ol class="alpha">
+                <li>Material breach of any term of this Agreement.</li>
+                <li>Non-payment of Fees following 7 days&rsquo; written notice.</li>
+                <li>Conduct posing a risk to the safety, health, or wellbeing of other Members or staff.</li>
+              </ol>
+            </li>
+            <li>Upon termination for cause, no refund of prepaid Fees shall be payable.</li>
+            <li>Members wishing to voluntarily terminate their Membership must do so in writing, subject to the Refund Policy.</li>
+          </ol>
+
+          <h3>10. Intellectual Property</h3>
+          <ol>
+            <li>All content on the Website, including text, graphics, logos, and software, is the exclusive intellectual property of the Company and is protected under the Copyright Act, 1957.</li>
+            <li>No content may be reproduced, distributed, or transmitted in any form without the prior written consent of the Company.</li>
+          </ol>
+
+          <h3>11. Grievance Redressal</h3>
+          <p>In compliance with the Consumer Protection Act, 2019, the designated Grievance Officer is:</p>
+          <div class="lm-grievance">
+            <strong>Name:</strong> Tarun Dev Shukla<br>
+            <strong>Designation:</strong> Owner &amp; Founder, The Weight Date<br>
+            <strong>Address:</strong> 128, Thornhill Road, Civil Lines, Prayagraj, Uttar Pradesh 211002<br>
+            <strong>Contact:</strong> +91 88406 55898
+          </div>
+          <ol>
+            <li>Grievances shall be acknowledged within 48 hours and resolved within 30 days of receipt.</li>
+          </ol>
+
+          <h3>12. Governing Law and Jurisdiction</h3>
+          <ol>
+            <li>This Agreement is governed by and construed in accordance with the laws of the Republic of India, including the Indian Contract Act, 1872 and the Consumer Protection Act, 2019.</li>
+            <li>All disputes arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the competent courts at Prayagraj, Uttar Pradesh.</li>
+            <li>Prior to initiating formal legal proceedings, the parties shall attempt in good faith to resolve disputes by direct negotiation for a minimum period of 30 days from the date of written notice.</li>
+          </ol>
+        </div><!-- /lm-terms -->
+
+        <!-- ── REFUND POLICY ── -->
+        <div class="lm-doc" id="lm-refund">
+          <p class="lm-meta">Effective Date: 1 January 2026 &nbsp;|&nbsp; Last Revised: 1 January 2026</p>
+
+          <h3>1. Definitions</h3>
+          <ol>
+            <li><strong>&ldquo;Act&rdquo;</strong> means the Consumer Protection Act, 2019.</li>
+            <li><strong>&ldquo;E-Commerce Rules&rdquo;</strong> means the Consumer Protection (E-Commerce) Rules, 2020.</li>
+            <li><strong>&ldquo;Company&rdquo;, &ldquo;We&rdquo;</strong> means The Weight Date, 128, Thornhill Road, Civil Lines, Prayagraj, Uttar Pradesh 211002.</li>
+            <li><strong>&ldquo;Member&rdquo;</strong> means a person who has paid Fees and been enrolled for Services.</li>
+            <li><strong>&ldquo;Fees&rdquo;</strong> means all amounts paid in respect of membership, personal training, dietary consultation, or any ancillary service.</li>
+            <li><strong>&ldquo;Cancellation&rdquo;</strong> means the voluntary termination of a Membership by the Member prior to the expiry of the paid membership period.</li>
+            <li><strong>&ldquo;Cooling-Off Period&rdquo;</strong> means the period of 48 (forty-eight) hours immediately following receipt of the first payment for a new membership enrolment.</li>
+            <li><strong>&ldquo;Force Majeure Event&rdquo;</strong> has the meaning given in the Terms of Service.</li>
+          </ol>
+
+          <h3>2. Scope and Applicability</h3>
+          <ol>
+            <li>This Policy governs all claims for refund, cancellation, or fee adjustment in connection with Services provided by the Company.</li>
+            <li>This Policy is to be read in conjunction with the Terms of Service and constitutes binding obligations on both the Member and the Company.</li>
+            <li>This Policy is published pursuant to Rules 4(2) and 6 of the E-Commerce Rules.</li>
+          </ol>
+
+          <h3>3. Cooling-Off Period Refund</h3>
+          <ol>
+            <li>A Member who cancels their Membership within the Cooling-Off Period is entitled to a full refund of Fees paid, without any deduction, provided:
+              <ol class="alpha">
+                <li>The Member has not accessed, used, or entered the Establishment or availed any Service during the Cooling-Off Period; and</li>
+                <li>Written cancellation notice is received by the Grievance Officer within 48 hours of the first payment.</li>
+              </ol>
+            </li>
+            <li>Refunds under this Clause shall be processed within 7 (seven) business days to the original payment instrument.</li>
+          </ol>
+
+          <h3>4. Non-Refundable Conditions</h3>
+          <ol>
+            <li>No refund shall be payable in the following circumstances:
+              <ol class="alpha">
+                <li>Cancellation after expiry of the Cooling-Off Period for any reason not covered under Clause 5.</li>
+                <li>Suspension or termination of Membership due to breach of the Terms of Service or Code of Conduct.</li>
+                <li>Failure to utilise the Services during the paid membership period, whether due to personal scheduling, travel, change of goals, or any other personal reason.</li>
+                <li>Temporary closure of the Establishment for a period of fewer than 7 (seven) consecutive calendar days due to maintenance, public holiday, or Force Majeure Event.</li>
+                <li>Completion of any personal training session or dietary consultation already rendered.</li>
+                <li>Purchase of non-membership products or ancillary items once delivered or accessed.</li>
+              </ol>
+            </li>
+          </ol>
+
+          <h3>5. Exceptional Refund Eligibility</h3>
+          <ol>
+            <li>Notwithstanding Clause 4, the Company may, at its sole and absolute discretion, consider a prorated refund in the following exceptional circumstances:
+              <ol class="alpha">
+                <li><strong>Permanent Medical Incapacity:</strong> Where a Member provides a certificate from a registered medical practitioner confirming a permanent medical condition preventing physical exercise. The refund shall be calculated on a pro-rata basis for the unutilised membership period only.</li>
+                <li><strong>Permanent Relocation:</strong> Where a Member provides documentary evidence of permanent relocation to a location beyond 50 km of all Establishment locations, and such relocation occurs more than 30 days before the membership expiry date.</li>
+              </ol>
+            </li>
+            <li>Applications for exceptional refunds must be submitted in writing to the Grievance Officer within 15 (fifteen) days of the triggering event, accompanied by all relevant supporting documentation.</li>
+            <li>A processing fee of &#8377;200 (Rupees Two Hundred only) shall be deducted from all approved exceptional refunds under Clause 5.1.</li>
+          </ol>
+
+          <h3>6. Extended Closure Credit</h3>
+          <ol>
+            <li>In the event the Establishment is closed for more than 7 (seven) consecutive calendar days due to reasons within the Company&rsquo;s control, Members shall be entitled to an equivalent extension of their membership period, or at the Member&rsquo;s election, a prorated credit applicable to future membership renewal.</li>
+            <li>No cash refund shall be payable under this Clause. The sole remedy is membership extension or renewal credit.</li>
+          </ol>
+
+          <h3>7. Refund Process</h3>
+          <ol>
+            <li>All refund requests must be submitted in writing via:
+              <ol class="alpha">
+                <li>WhatsApp or telephone to +91 88406 55898, followed by written confirmation; or</li>
+                <li>Direct written communication addressed to the Grievance Officer at the Establishment address.</li>
+              </ol>
+            </li>
+            <li>The Company shall acknowledge receipt of a refund request within 48 hours.</li>
+            <li>Eligible refunds shall be processed within 7 (seven) business days of written approval.</li>
+            <li>Refunds shall be credited exclusively to the original payment instrument. No cash refunds shall be issued for payments received via digital or electronic modes.</li>
+            <li>In cases of dispute regarding eligibility, the matter shall be decided by the Grievance Officer, whose decision is final, subject to the Member&rsquo;s right to approach the competent Consumer Forum under the Act.</li>
+          </ol>
+
+          <h3>8. Consumer Forum</h3>
+          <ol>
+            <li>Nothing in this Policy derogates from the Member&rsquo;s statutory rights under the Consumer Protection Act, 2019 to approach the District Consumer Disputes Redressal Commission at Prayagraj, Uttar Pradesh.</li>
+          </ol>
+
+          <h3>9. Governing Law and Jurisdiction</h3>
+          <ol>
+            <li>This Policy is governed by the Consumer Protection Act, 2019 and the Consumer Protection (E-Commerce) Rules, 2020.</li>
+            <li>All disputes arising from or in connection with this Policy shall be subject to the exclusive jurisdiction of the competent courts and consumer forums at Prayagraj, Uttar Pradesh.</li>
+          </ol>
+        </div><!-- /lm-refund -->
+
+      </div><!-- /lm-body -->
+    </div><!-- /lm-panel -->
+  </div><!-- /lm -->
+</body>
+</html>
